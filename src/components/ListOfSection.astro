@@ -8,14 +8,15 @@ import { SECTIONS } from "../constants";
       const title = section.title;
       const url = section.url;
       return (
-        <div
-          class="rounded-[var(--border)] overflow-hidden bg-cover bg-center"
+        <a
+          href={`productos/${title}`}
+          class="rounded-[var(--border)] shadow-xl overflow-hidden bg-cover bg-center cursor-pointer"
           style={`background-image: ${url}`}
         >
           <div class="bg-[var(--color-shadow-2)] h-72 flex justify-center items-center">
             <h4 class="text-white text-lg uppercase">{title}</h4>
           </div>
-        </div>
+        </a>
       );
     })
   }

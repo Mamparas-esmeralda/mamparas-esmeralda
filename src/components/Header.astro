@@ -7,9 +7,9 @@ import IconMenu from "./icons/IconMenu.astro";
   <div
     class="relative px-[var(--px-sm)] flex justify-between items-center w-full"
   >
-    <div>
+    <a href="/">
       <img src="/public/images/logo.png" class="max-h-[10vh]" alt="" />
-    </div>
+    </a>
     <div class="cursor-pointer sm:hidden transition-[0.5s]" id="menu-icon">
       <div id="open">
         <IconMenu />
@@ -19,9 +19,15 @@ import IconMenu from "./icons/IconMenu.astro";
       </div>
     </div>
     <div
-      class="translate-x-full absolute top-[100%] transition-[0.5s] right-0 w-full h-screen bg-white z-50"
+      class="shadow-sm bg-gradient-to-tr from-slate-600 to-[var(--color-primary)] p-10 flex justify-start translate-x-full absolute top-[100%] transition-[0.5s] right-0 w-5/6 h-screen bg-white z-50"
       id="menu"
     >
+      <ul class="flex gap-4 flex-col text-white font-bold text-xl">
+        <li>Home</li>
+        <li>La empresa</li>
+        <li>Productos</li>
+        <li>Contacto</li>
+      </ul>
     </div>
   </div>
 </header>
