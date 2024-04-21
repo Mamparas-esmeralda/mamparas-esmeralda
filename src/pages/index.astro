@@ -1,18 +1,12 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
-console.log("This runs in your terminal, not the browser!");
+import Layout from "../layouts/Layout.astro";
+import Carrousel from "../components/Carrousel.astro";
+import Products from "../components/Products.astro";
+import Header from "../components/Header.astro";
 ---
 
-<!-- Below is your "component template." It's just HTML, but with
-     some magic sprinkled in to help you build great templates. -->
-<html>
-  <body>
-    <h1 class="text-orange-700">Hello, World!</h1>
-  </body>
-</html>
-<style is:global>
-  :root {
-    --color-primary: "";
-  }
-</style>
+<Layout title="Welcome to Astro.">
+  <Header />
+  <Carrousel />
+  <Products />
+</Layout>
