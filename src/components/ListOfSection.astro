@@ -1,0 +1,22 @@
+---
+import { SECTIONS } from "../constants";
+---
+
+<div class="flex flex-col gap-4">
+  {
+    SECTIONS.map((section) => {
+      const title = section.title;
+      const url = section.url;
+      return (
+        <div
+          class="rounded-[var(--border)] overflow-hidden bg-cover bg-center"
+          style={`background-image: ${url}`}
+        >
+          <div class="bg-[var(--color-shadow-2)] h-72 flex justify-center items-center">
+            <h4 class="text-white text-lg uppercase">{title}</h4>
+          </div>
+        </div>
+      );
+    })
+  }
+</div>
