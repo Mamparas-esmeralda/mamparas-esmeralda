@@ -22,14 +22,14 @@ import IconX from "./icons/IconX.astro";
       </div>
     </div>
     <div
-      class="pb-10 bg-gradient-to-tr from-slate-600 to-[var(--color-primary)] p-10 flex flex-col translate-x-full justify-between absolute top-[100%] transition-[0.5s] right-0 w-5/6 h-[85vh] bg-white z-50"
+      class="pb-20 bg-gradient-to-tr from-slate-600 to-[var(--color-primary)] p-10 flex flex-col translate-x-full justify-between absolute top-[100%] transition-[0.5s] right-0 w-5/6 h-[95vh] bg-white z-50"
       id="menu"
     >
-      <ul class="flex gap-4 flex-col text-white font-bold text-xl">
-        <li>Home</li>
-        <li>La empresa</li>
-        <li>Productos</li>
-        <li>Contacto</li>
+      <ul class="flex gap-4 flex-col text-white font-bold text-xl" id="menu-a">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#productos">Productos</a></li>
+        <li><a href="/#empresa">La empresa</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
       </ul>
       <div class="flex gap-4">
         <IconFacebook />
@@ -45,6 +45,15 @@ import IconX from "./icons/IconX.astro";
   const close = document.getElementById("close");
   const open = document.getElementById("open");
   const menu = document.getElementById("menu");
+  const menuA = document.querySelectorAll("#menu-a li a");
+
+  menuA.forEach((a) => {
+    a.addEventListener("click", () => {
+      menu.classList.toggle("translate-x-full");
+      close.classList.toggle("hidden");
+      open.classList.toggle("hidden");
+    });
+  });
 
   menuIcon.addEventListener("click", () => {
     menu.classList.toggle("translate-x-full");
