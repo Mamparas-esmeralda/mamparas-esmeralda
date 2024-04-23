@@ -1,0 +1,17 @@
+---
+import { type Product } from "../types";
+
+interface Props {
+  products: Product[];
+}
+
+const { products } = Astro.props;
+---
+
+<div>
+  {
+    products?.map((product) => {
+      return <h1 class="mt-20 text-3xl">{product.description}</h1>;
+    })
+  }
+</div>

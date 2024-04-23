@@ -1,0 +1,23 @@
+---
+import { SECTIONS } from "../../constants";
+import { PRODUCTS } from "../../constants";
+import ListOfProducts from "../../components/ListOfProducts.astro";
+
+import Layout from "../../layouts/Layout.astro";
+export function getStaticPaths() {
+  const props = SECTIONS.map((section) => {
+    return {
+      params: {
+        type: section.type,
+      },
+    };
+  });
+  return props;
+}
+const { type } = Astro.params;
+const productsFiltered = PRODUCTS.filter((product) => product.type == type);
+---
+
+<Layout title="Productos">
+  <ListOfProducts products={productsFiltered} />
+</Layout>
