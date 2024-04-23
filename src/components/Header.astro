@@ -1,6 +1,9 @@
 ---
 import IconClose from "./icons/IconClose.astro";
+import IconFacebook from "./icons/IconFacebook.astro";
 import IconMenu from "./icons/IconMenu.astro";
+import IconInstagram from "./icons/IconInstagram.astro";
+import IconX from "./icons/IconX.astro";
 ---
 
 <header class="fixed top-0 w-full bg-white z-50 shadow-sm">
@@ -19,7 +22,7 @@ import IconMenu from "./icons/IconMenu.astro";
       </div>
     </div>
     <div
-      class="shadow-sm bg-gradient-to-tr from-slate-600 to-[var(--color-primary)] p-10 flex justify-start translate-x-full absolute top-[100%] transition-[0.5s] right-0 w-5/6 h-screen bg-white z-50"
+      class="pb-10 bg-gradient-to-tr from-slate-600 to-[var(--color-primary)] p-10 flex flex-col translate-x-full justify-between absolute top-[100%] transition-[0.5s] right-0 w-5/6 h-[85vh] bg-white z-50"
       id="menu"
     >
       <ul class="flex gap-4 flex-col text-white font-bold text-xl">
@@ -28,6 +31,11 @@ import IconMenu from "./icons/IconMenu.astro";
         <li>Productos</li>
         <li>Contacto</li>
       </ul>
+      <div class="flex gap-4">
+        <IconFacebook />
+        <IconInstagram />
+        <IconX />
+      </div>
     </div>
   </div>
 </header>

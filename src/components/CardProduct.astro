@@ -1,0 +1,40 @@
+---
+interface Props {
+  type: string;
+  title: string;
+  description: string;
+  url: string;
+  measures: string;
+  finish: string;
+  typeGlass: string;
+}
+
+const { type, title, description, url, measures, finish, typeGlass } =
+  Astro.props;
+---
+
+<div class="flex flex-col bg-white rounded-[var(--border)] overflow-hidden">
+  <img src={`/public/images/${type}/${url}.png`} />
+  <section class="px-[var(--px-sm)] py-10 relative">
+    <p class="text-[#333]">{type}</p>
+
+    <h2 class="text-2xl font-bold mb-4">{title}</h2>
+    <h3 class="font-semibold">Caracteristicas</h3>
+    <p class="text-[#333] text-sm">{description}</p>
+
+    <h3 class="font-semibold mt-2">Medidas del producto</h3>
+    <p class="text-[#333] text-sm">{measures}</p>
+
+    <h3 class="font-semibold mt-2">Acabado</h3>
+    <p class="text-[#333] text-sm">{finish}</p>
+
+    <h3 class="font-semibold mt-2">Tipos de vidrio</h3>
+    <p class="text-[#333] text-sm">{typeGlass}</p>
+    <a
+      href="/#contacto"
+      class="flex justify-center shadow-xl mt-10 bg-gradient-to-tr from-slate-600 to-[var(--color-primary)] text-white py-2 w-full text-center rounded-[var(--border)]"
+    >
+      consultanos
+    </a>
+  </section>
+</div>

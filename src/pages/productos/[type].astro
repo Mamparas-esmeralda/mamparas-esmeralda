@@ -2,6 +2,7 @@
 import { SECTIONS } from "../../constants";
 import { PRODUCTS } from "../../constants";
 import ListOfProducts from "../../components/ListOfProducts.astro";
+import HeaderProducts from "../../components/HeaderProducts.astro";
 
 import Layout from "../../layouts/Layout.astro";
 export function getStaticPaths() {
@@ -19,5 +20,8 @@ const productsFiltered = PRODUCTS.filter((product) => product.type == type);
 ---
 
 <Layout title="Productos">
-  <ListOfProducts products={productsFiltered} />
+  <HeaderProducts type={type} />
+  <section class="px-[var(--px-sm)] py-10">
+    <ListOfProducts products={productsFiltered} />
+  </section>
 </Layout>

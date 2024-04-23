@@ -1,5 +1,6 @@
 ---
 import { type Product } from "../types";
+import CardProduct from "./CardProduct.astro";
 
 interface Props {
   products: Product[];
@@ -8,10 +9,22 @@ interface Props {
 const { products } = Astro.props;
 ---
 
-<div>
+<div class="flex flex-col gap-8">
   {
     products?.map((product) => {
-      return <h1 class="mt-20 text-3xl">{product.description}</h1>;
+      const { type, title, description, url, finish, measures, typeGlass } =
+        product;
+      return (
+        <CardProduct
+          type={type}
+          description={description}
+          title={title}
+          url={url}
+          finish={finish}
+          measures={measures}
+          typeGlass={typeGlass}
+        />
+      );
     })
   }
 </div>

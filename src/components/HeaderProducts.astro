@@ -1,0 +1,20 @@
+---
+import { SECTIONS } from "../constants";
+
+interface Props {
+  type: string;
+}
+
+const { type } = Astro.props;
+const sectionsFiltered = SECTIONS.filter((section) => section.type == type);
+const { url, title, subtitle } = sectionsFiltered[0];
+---
+
+<section class="h-[35vh] bg-cover" style={`background-image: ${url}`}>
+  <div
+    class="pt-20 z-[100] w-full h-full px-[var(--px-sm)] bg-[var(--color-shadow-1)] flex flex-col justify-center"
+  >
+    <h1 class="text-3xl text-white font-bold mb-2 text-rainbow">{title}</h1>
+    <h2 class="text-[#eee]">{subtitle}</h2>
+  </div>
+</section>

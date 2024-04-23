@@ -5,4 +5,5 @@ export interface Product {
   description: string;
   finish: string;
   typeGlass: string;
+  measures: string;
 }
