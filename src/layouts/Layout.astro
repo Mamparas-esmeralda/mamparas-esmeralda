@@ -69,6 +69,33 @@ const { title } = Astro.props;
     animation: gradientText 2s ease alternate-reverse infinite;
   }
 
+  .text-juan {
+    background: linear-gradient(
+      89.81deg,
+      red,
+      orange,
+      yellow,
+      lightgreen,
+      lightblue,
+      violet
+    );
+    fill: linear-gradient(
+      89.81deg,
+      red,
+      orange,
+      yellow,
+      lightgreen,
+      lightblue,
+      violet
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-size: 300%;
+    animation: gradientText 2s ease alternate-reverse infinite;
+  }
+
   @keyframes gradientText {
     0% {
       background-position: left;
