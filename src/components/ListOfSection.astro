@@ -2,7 +2,7 @@
 import { SECTIONS } from "../constants";
 ---
 
-<div class="flex flex-col gap-4">
+<div class="w-full flex flex-col gap-4 sm:max-w-2xl sm:mx-auto">
   {
     SECTIONS.map((section) => {
       const type = section.type;
@@ -11,7 +11,7 @@ import { SECTIONS } from "../constants";
       return (
         <a
           href={`productos/${type}`}
-          class="rounded-[var(--border)] shadow-xl overflow-hidden bg-cover bg-center cursor-pointer"
+          class="rounded-lg shadow-xl overflow-hidden bg-cover bg-center cursor-pointer"
           style={`background-image: ${url}`}
         >
           <div class="bg-[var(--color-shadow-2)] h-72 flex justify-center items-center">

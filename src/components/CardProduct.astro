@@ -13,9 +13,9 @@ const { type, title, description, url, measures, finish, typeGlass } =
   Astro.props;
 ---
 
-<div class="flex flex-col bg-white rounded-[var(--border)] overflow-hidden">
-  <img src={`/public/images/${type}/${url}.png`} />
-  <section class="px-[var(--px-sm)] py-10 relative">
+<div class="flex flex-col bg-white rounded-lg overflow-hidden">
+  <img src={`/public/images/${type}/${url}.webp`} />
+  <section class="px-phone py-10 relative">
     <p class="text-[#333]">{type}</p>
 
     <h2 class="text-2xl font-bold mb-4">{title}</h2>

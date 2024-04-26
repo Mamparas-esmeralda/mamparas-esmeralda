@@ -4,15 +4,26 @@ import IconFacebook from "./icons/IconFacebook.astro";
 import IconMenu from "./icons/IconMenu.astro";
 import IconInstagram from "./icons/IconInstagram.astro";
 import IconX from "./icons/IconX.astro";
+import IconMail from "./icons/IconMail.astro";
+import IconPhone from "./icons/IconPhone.astro";
 ---
 
 <header class="fixed top-0 w-full bg-white z-50 shadow-sm">
   <div
-    class="relative px-[var(--px-sm)] flex justify-between items-center w-full"
+    class="relative px-phone flex justify-between items-center w-full sm:max-w-2xl sm:mx-auto"
   >
     <a href="/">
-      <img src="/public/images/logo.png" class="max-h-[10vh]" alt="" />
+      <img src="/public/images/logo.webp" class="max-h-[10vh]" alt="" />
     </a>
+    <div class="hidden sm:flex">
+      <ul class="gap-4 flex text-[var(--color-primary)] uppercase text-xs">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#productos">Productos</a></li>
+        <li><a href="/#empresa">La empresa</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
     <div class="cursor-pointer sm:hidden transition-[0.5s]" id="menu-icon">
       <div id="open">
         <IconMenu />
@@ -22,7 +33,7 @@ import IconX from "./icons/IconX.astro";
       </div>
     </div>
     <div
-      class="pb-20 bg-gradient-to-tr from-slate-600 to-[var(--color-primary)] p-10 flex flex-col translate-x-full justify-between absolute top-[100%] transition-[0.5s] right-0 w-5/6 h-[95vh] bg-white z-50"
+      class="sm:hidden pb-20 bg-gradient-to-tr from-slate-600 to-[var(--color-primary)] p-10 flex flex-col translate-x-full justify-between absolute top-[100%] transition-[0.5s] right-0 w-5/6 h-[95vh] bg-white z-50"
       id="menu"
     >
       <ul class="flex gap-4 flex-col text-white font-bold text-xl" id="menu-a">
@@ -31,10 +42,13 @@ import IconX from "./icons/IconX.astro";
         <li><a href="/#empresa">La empresa</a></li>
         <li><a href="/#contacto">Contacto</a></li>
       </ul>
-      <div class="flex gap-4">
-        <IconFacebook />
-        <IconInstagram />
-        <IconX />
+      <div>
+        <div class="flex gap-4">
+          <IconFacebook />
+          <IconInstagram />
+          <IconX />
+        </div>
+        <div></div>
       </div>
     </div>
   </div>

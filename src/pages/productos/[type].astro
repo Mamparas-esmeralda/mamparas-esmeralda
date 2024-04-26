@@ -5,6 +5,8 @@ import ListOfProducts from "../../components/ListOfProducts.astro";
 import HeaderProducts from "../../components/HeaderProducts.astro";
 
 import Layout from "../../layouts/Layout.astro";
+import Galery from "../../components/Galery.astro";
+import Work from "../../components/Work.astro";
 export function getStaticPaths() {
   const props = SECTIONS.map((section) => {
     return {
@@ -21,7 +23,8 @@ const productsFiltered = PRODUCTS.filter((product) => product.type == type);
 
 <Layout title="Productos">
   <HeaderProducts type={type} />
-  <section class="px-[var(--px-sm)] py-10">
+  <section class="px-phone py-10">
     <ListOfProducts products={productsFiltered} />
   </section>
+  <Work type={type} />
 </Layout>
