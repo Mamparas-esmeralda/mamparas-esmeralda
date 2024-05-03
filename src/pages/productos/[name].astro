@@ -1,30 +1,27 @@
 ---
-import { SECTIONS } from "../../constants";
-import { PRODUCTS } from "../../constants";
+import sections from "../../content/sections/sections.json";
 import ListOfProducts from "../../components/ListOfProducts.astro";
 import HeaderProducts from "../../components/HeaderProducts.astro";
-
 import Layout from "../../layouts/Layout.astro";
-import Galery from "../../components/Galery.astro";
 import Work from "../../components/Work.astro";
+
 export function getStaticPaths() {
-  const props = SECTIONS.map((section) => {
+  const props = sections.map((section) => {
     return {
       params: {
-        type: section.type,
+        name: section.name,
       },
     };
   });
   return props;
 }
-const { type } = Astro.params;
-const productsFiltered = PRODUCTS.filter((product) => product.type == type);
+const { name } = Astro.params;
 ---
 
 <Layout title="Productos">
-  <HeaderProducts type={type} />
+  <HeaderProducts name={name} />
   <section class="px-phone py-10">
-    <ListOfProducts products={productsFiltered} />
+    <ListOfProducts name={name} />
   </section>
-  <Work type={type} />
+  <Work name={name} />
 </Layout>

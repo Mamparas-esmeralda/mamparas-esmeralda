@@ -1,12 +1,11 @@
 ---
-import { SECTIONS } from "../constants";
-
+import sections from "../content/sections/sections.json";
 interface Props {
-  type: string;
+  name: string;
 }
 
-const { type } = Astro.props;
-const sectionsFiltered = SECTIONS.filter((section) => section.type == type);
+const { name } = Astro.props;
+const sectionsFiltered = sections.filter((section) => section.name == name);
 const { url, title, subtitle } = sectionsFiltered[0];
 ---
 

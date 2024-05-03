@@ -1,10 +1,10 @@
 ---
 import Galery from "./Galery.astro";
 interface Props {
-  type: string;
+  name: string;
 }
 
-const { type } = Astro.props;
+const { name } = Astro.props;
 ---
 
 <section
@@ -13,6 +13,6 @@ const { type } = Astro.props;
   <div class="py-20 z-[100] w-full h-full px-phone bg-[var(--color-shadow-1)]">
     <h2 class="font-bold text-3xl text-white mb-10">Nuestro trabajo</h2>
 
-    <Galery type={type} />
+    <Galery name={name} />
   </div>
 </section>
