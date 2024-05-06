@@ -2,11 +2,17 @@
 import IconFacebook from "./icons/IconFacebook.astro";
 import IconInstagram from "./icons/IconInstagram.astro";
 import IconX from "./icons/IconX.astro";
+import { Image } from "astro:assets";
+import localLogo from "../../public/images/logos/logo-blanco.webp";
 ---
 
 <footer class="px-phone py-10 bg-[#333] flex flex-col">
   <div class="flex justify-between items-center">
-    <img class="w-40" src="/images/logos/logo-blanco.webp" alt="" />
+    <Image
+      src={localLogo}
+      alt="Logo vidrieria Mamparas esmeralda en blanco"
+      class="max-w-40 object-contain w-fit"
+    />
     <div class="flex gap-2">
       <IconFacebook />
       <IconInstagram />
