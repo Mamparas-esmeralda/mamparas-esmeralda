@@ -4,16 +4,20 @@ import IconFacebook from "./icons/IconFacebook.astro";
 import IconMenu from "./icons/IconMenu.astro";
 import IconInstagram from "./icons/IconInstagram.astro";
 import IconX from "./icons/IconX.astro";
-import IconMail from "./icons/IconMail.astro";
-import IconPhone from "./icons/IconPhone.astro";
+import { Image } from "astro:assets";
+import localLogo from "../../public/images/logos/logo.webp";
 ---
 
 <header class="fixed top-0 w-full bg-white z-50 shadow-sm">
   <div
     class="relative px-phone flex justify-between items-center w-full sm:max-w-2xl sm:mx-auto"
   >
-    <a href="/">
-      <img src="/images/logos/logo.webp" class="max-h-[10vh]" alt="" />
+    <a href="/" class="">
+      <Image
+        src={localLogo}
+        alt="Logo vidrieria Mamparas esmeralda"
+        class="max-h-[10vh] object-contain w-fit"
+      />
     </a>
     <div class="hidden sm:flex">
       <ul class="gap-4 flex text-[var(--color-primary)] uppercase text-xs">

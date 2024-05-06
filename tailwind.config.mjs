@@ -6,6 +6,9 @@ export default {
       padding: {
         phone: "20px",
       },
+      backgroundColor: {
+        shadow: "rgba(51, 51, 51, 0.92)",
+      },
     },
   },
   plugins: [],
